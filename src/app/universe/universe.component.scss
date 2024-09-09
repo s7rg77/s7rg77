@@ -1,0 +1,148 @@
+.rendererContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.developer {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 50%;
+  padding: 5px;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  background-color: rgba(0, 255, 0, 0.25);
+  border-radius: 5px;
+}
+
+.toggle-aboutme-btn {
+  position: absolute;
+  z-index: 1;
+  top: 1725px;
+  right: 10px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  background-color: rgba(0, 255, 0, 0.25);
+  color: lime;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.toggle-aboutme-btn:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.aboutme {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  top: 1800px;
+  right: 10px;
+  width: 50%;
+  padding: 5px;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+span {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+.aboutme p {
+  margin: 10px;
+}
+
+.toggle-projects-btn {
+  position: absolute;
+  z-index: 1;
+  top: 3325px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  background-color: rgba(0, 255, 0, 0.25);
+  color: lime;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.toggle-projects-btn:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.projects {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 3400px;
+  width: 50%;
+  padding: 5px;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: max-height 0.5s ease-in-out;
+  max-height: 2000px;
+  overflow: hidden;
+}
+
+.projects p {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+a:hover,
+.link:hover,
+.git:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+  transition: background-color 0.25s ease;
+}
+
+.link {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+.git {
+  color: yellow;
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+.projects.hidden {
+  max-height: 0;
+}
+
+.footer {
+  position: absolute;
+  z-index: 1;
+  top: 5400px;
+  padding: 5px;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  background-color: rgba(0, 255, 0, 0.25);
+  border-radius: 5px;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+
+  .aboutme,
+  .projects {
+    width: 95%;
+    left: 10px;
+    right: 0;
+  }
+
+}

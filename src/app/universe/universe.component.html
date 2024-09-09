@@ -1,0 +1,73 @@
+<div #rendererContainer class="rendererContainer"></div>
+<div class="developer">
+    <p>webApp developer</p>
+</div>
+<button class="toggle-aboutme-btn" (click)="toggleAboutMe()">About Me</button>
+<div class="aboutme" [class.hidden]="isAboutMeHidden">
+    <ng-container *ngFor="let line of aboutMeText; let lineIndex = index">
+        <p>
+            <ng-container *ngFor="let char of line; let charIndex = index">
+                <span [style.visibility]="isCharVisible(lineIndex, charIndex) ? 'visible' : 'hidden'">{{ char }}</span>
+            </ng-container>
+        </p>
+    </ng-container>
+</div>
+<button class="toggle-projects-btn" (click)="toggleProjects()">Projects</button>
+<div class="projects" [class.hidden]="isProjectsHidden">
+    <p>
+        PROJECTS:<br><br>
+        <a href="https://foronite.com" class="link">- Foronite.com (Angular, TypeScript, PHP, SQL) (2024)</a>
+        <a href="https://github.com/s7rg77/foronite" class="git">(git)</a><br>
+        <a href="https://s7rg77.com" class="link">- s7rg77.com (Angular, TypeScript, Three.JS) (2024)</a>
+        <a href="https://github.com/s7rg77/s7rg77" class="git">(git)</a><br>
+        <a href="/three.js/solarSystem/index.html" class="link">- Three.JS (2023)</a><br>
+        <a href="/css/index.html" class="link">- CSS (2023)</a><br><br>
+        DAW ASSIGNMENTS:<br><br>
+        PHP:<br><br>
+        <a href="/dwes/dwes01/index.php" class="link">- Installation and configuration of a web server (2023)</a><br>
+        <a href="/dwes/dwes02/index.php" class="link">- Basic PHP syntax (2023)</a><br>
+        <a href="/dwes/dwes03/index.php" class="link">- Basic PHP programming (2023)</a><br>
+        <a href="/dwes/dwes04/login.php" class="link">- Sessions and cookies (2023)</a><br>
+        <a href="/dwes/dwes05/index.php" class="link">- MVC model (2023)</a><br>
+        <a href="/dwes/dwes06/index.php" class="link">- Database (2024)</a><br>
+        <a href="/dwes/dwes07/index.php" class="link">- Web service (2024)</a><br>
+        <a href="/dwes/dwes08/index.html" class="link">- Ajax (2024)</a><br>
+        <a href="/dwes/dwes09/index.php" class="link">- Hybrid web applications (2024)</a><br><br>
+        JAVASCRIPT:<br><br>
+        <a href="/dwec/dwec01/index.html" class="link">- JavaScript working environment (2023)</a><br>
+        <a href="/dwec/dwec02/index.html" class="link">- Arrays and iterative control structures in JavaScript (2023)</a><br>
+        <a href="/dwec/dwec03/index.html" class="link">- Predefined JavaScript objects (2023)</a><br>
+        <a href="/dwec/dwec04/index.html" class="link">- Arrays and objects (2023)</a><br>
+        <a href="/dwec/dwec05/index.html" class="link">- Form validation (2024)</a><br>
+        <a href="/dwec/dwec06/index.html" class="link">- Dynamic creation of an HTML document (2024)</a><br>
+        <a href="/dwec/dwec07/index.html" class="link">- AJAX and XML (2024)</a><br>
+        <a href="/dwec/angular/index.html" class="link">- Angular, TypeScript (2024)</a><br><br>
+        JAVA:<br><br>
+        <a href="/pgr/pgr01/index.html" class="link">- Computer program elements (2022)</a><br>
+        <a href="/pgr/pgr02/index.html" class="link">- Objects and system classes management (2022)</a><br>
+        <a href="/pgr/pgr03/index.html" class="link">- Control structures management (2022)</a><br>
+        <a href="/pgr/pgr04/index.html" class="link">- Class development (2022)</a><br>
+        <a href="/pgr/pgr05/index.html" class="link">- File management (2023)</a><br>
+        <a href="/pgr/pgr06/index.html" class="link">- File management with arrays (2023)</a><br>
+        <a href="/pgr/pgr07/index.html" class="link">- Advanced class management and inheritance (2023)</a><br>
+        <a href="/pgr/pgr08/index.html" class="link">- Object oriented database management (2023)</a><br>
+        <a href="/pgr/pgr09/index.html" class="link">- Relational database management (2023)</a>
+    </p>
+</div>
+<div class="footer">
+    <p>
+        Email: sxrgxx&#64;gmail.com / WhatsApp: +34_652320090 / La_Joyosa, Zaragoza (Spain)
+    </p>
+</div>
+<div class="space">
+    <app-footer [camera]="camera" [renderer]="renderer" [scene]="scene"></app-footer>
+    <app-name [camera]="camera" [renderer]="renderer" [scene]="scene"></app-name>
+
+    <app-planet01 [camera]="camera" [renderer]="renderer" [scene]="scene"></app-planet01>
+    <app-planet02 [camera]="camera" [renderer]="renderer" [scene]="scene"></app-planet02>
+
+    <app-star01 [camera]="camera" [renderer]="renderer" [scene]="scene"></app-star01>
+    <app-star02 [camera]="camera" [renderer]="renderer" [scene]="scene"></app-star02>
+
+    <app-galaxy [camera]="camera" [renderer]="renderer" [scene]="scene"></app-galaxy>
+</div>
