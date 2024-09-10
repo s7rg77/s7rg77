@@ -93,6 +93,10 @@ span {
   overflow: hidden;
 }
 
+.projects.hidden {
+  max-height: 0;
+}
+
 .projects p {
   margin: 10px;
 }
@@ -120,14 +124,40 @@ a:hover,
   background-color: rgba(0, 255, 0, 0.25);
 }
 
-.projects.hidden {
-  max-height: 0;
+.foroniteimg {
+  height: auto;
+  width: 250px;
+  max-width: 600px;
+  margin-top: 5px;
+  transition: width 0.5s ease;
+}
+
+.foroniteimg:hover {
+  width: 100%;
+  max-width: 600px;
+}
+
+.svg {
+  position: absolute;
+  z-index: 1;
+  top: 5950px;
+  animation: rotate 10s ease infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .footer {
   position: absolute;
   z-index: 1;
-  top: 5400px;
+  top: 6000px;
   padding: 5px;
   color: lime;
   font-family: 'Courier New', Courier, monospace;
